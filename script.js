@@ -46,7 +46,7 @@ app.post("/" , function(req , res){
             res.sendFile(__dirname + "/failure.html");
         }
         response.on("data" , function(data){
-            console.log(response.statusCode);
+
         });
 
     });
@@ -60,6 +60,6 @@ app.post("/failure" , function(req ,res){
     res.redirect("/");
 })
 
-app.listen(process.env.PORT || 3000 , function(){
+app.listen(3000 , function(){
     console.log("server is running at post 3000");
 });
